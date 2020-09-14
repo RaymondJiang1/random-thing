@@ -65,6 +65,28 @@ class Random {
 		};
 		return content;
 	}
+
+	async getMeme() {
+		const meme = await fetch('http://image-api-2.glitch.me/reddit/meme');
+		const Meme = await meme.json();
+
+		if (!Meme.img) {
+			throw new Error(
+				'Meme could not be gotten. Please wait for the developers to fix this',
+			);
+		}
+
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random meme',
+				description: 'Look at this funny meme!',
+				image: Meme.img,
+				footer: new Date(),
+			},
+		};
+		return content;
+	}
 }
 
 module.exports = Random;
