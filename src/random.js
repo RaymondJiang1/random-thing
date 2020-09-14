@@ -67,24 +67,21 @@ class Random {
 	}
 
 	async getMeme() {
-		const meme = await fetch('http://image-api-2.glitch.me/reddit/meme');
-		const Meme = await meme.json();
+		const main = await fetch('https://apis.duncte123.me/meme');
+		const mat = await main.json();
 
-		if (!Meme.img) {
-			throw new Error(
-				'Meme could not be gotten. Please wait for the developers to fix this',
-			);
+		if (!mat.success) {
+			return console.log('Error 01: Unable to access the json content of API');
 		}
 
 		let content = {
 			embed: {
 				color: 'RANDOM',
-				title: 'Random meme',
-				description: 'Look at this funny meme!',
-				image: { url: Meme.img },
-				footer: new Date(),
+				title: mat.data.title,
+				image: { url: mat.data.image },
 			},
 		};
+
 		return content;
 	}
 }
