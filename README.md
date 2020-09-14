@@ -36,3 +36,10 @@ client.login('TOKEN');
 let data = await random.getJoke();
 message.channel.send(data);
 ```
+
+**getDog()**: Provides you a very cute dog!
+
+```js
+let data = await random.getDog();
+message.channel.send(data);
+```

@@ -21,6 +21,28 @@ class Random {
 		};
 		return content;
 	}
+
+	async getDog() {
+		const Dog = await fetch('https://random.dog/woof.json');
+		const dog = await Joke.json();
+
+		if (!dog.url) {
+			throw new Error(
+				'Dog could not be gotten. Please wait for the developers to fix this',
+			);
+		}
+
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random dog',
+				description: 'Look at this cute dog!',
+				image: dog.url,
+				footer: new Date(),
+			},
+		};
+		return content;
+	}
 }
 
 module.exports = Random;
