@@ -1,0 +1,31 @@
+{
+	"name": "random-thing",
+	"version": "1.0.0",
+	"description": "Can get random things from the internet",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RaymondJiang1/random-thing.git"
+	},
+	"keywords": [
+		"random",
+		"random",
+		"thing",
+		"discord"
+	],
+	"author": "RaymondJiang1#5270 neko#0003",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RaymondJiang1/random-thing/issues"
+	},
+	"homepage": "https://github.com/RaymondJiang1/random-thing#readme",
+	"dependencies": {
+		"node-fetch": "^2.6.1"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	}
+}
