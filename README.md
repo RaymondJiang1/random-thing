@@ -35,20 +35,27 @@ client.login('TOKEN');
 **getJoke()**: Provides You a Random Funny Joke.
 
 ```js
-let data = await random.getJoke();
+let data = await Random.getJoke();
 message.channel.send(data);
 ```
 
 **getDog()**: Provides you a very cute dog!
 
 ```js
-let data = await random.getDog();
+let data = await Random.getDog();
 message.channel.send(data);
 ```
 
 **getCat()**: Provides you a very cute cat!
 
 ```js
-let data = await random.getCat();
+let data = await Random.getCat();
+message.channel.send(data);
+```
+
+**getMeme()**: Provides you a very funny meme!
+
+```js
+let data = await Random.getMeme();
 message.channel.send(data);
 ```
