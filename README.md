@@ -5,6 +5,7 @@ Below are the things that this package offers you.
 - Get a random joke
 - Get a cute dog
 - Get a cute cat
+- Get a funny meme!
 
 # SETUP
 
