@@ -43,6 +43,28 @@ class Random {
 		};
 		return content;
 	}
+
+	async getCat() {
+		const Cat = await fetch('http://aws.random.cat/meow');
+		const cat = await Joke.json();
+
+		if (!cat.url) {
+			throw new Error(
+				'Cat could not be gotten. Please wait for the developers to fix this',
+			);
+		}
+
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random cat',
+				description: 'Look at this cute cat!',
+				image: cat.file,
+				footer: new Date(),
+			},
+		};
+		return content;
+	}
 }
 
 module.exports = Random;

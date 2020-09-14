@@ -3,6 +3,8 @@
 Below are the things that this package offers you.
 
 - Get a random joke
+- Get a cute dog
+- Get a cute cat
 
 # SETUP
 
@@ -41,5 +43,12 @@ message.channel.send(data);
 
 ```js
 let data = await random.getDog();
+message.channel.send(data);
+```
+
+**getCat()**: Provides you a very cute cat!
+
+```js
+let data = await random.getCat();
 message.channel.send(data);
 ```
