@@ -1,5 +1,5 @@
 {
-	"name": "random-thing",
+	"name": "random-thing-for-discord",
 	"version": "1.0.0",
 	"description": "Can get random things from the internet",
 	"main": "index.js",
@@ -24,8 +24,5 @@
 	"homepage": "https://github.com/RaymondJiang1/random-thing#readme",
 	"dependencies": {
 		"node-fetch": "^2.6.1"
-	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
 	}
 }
