@@ -24,7 +24,7 @@ class Random {
 
 	async getDog() {
 		const Dog = await fetch('https://random.dog/woof.json');
-		const dog = await Joke.json();
+		const dog = await Dog.json();
 
 		if (!dog.url) {
 			throw new Error(
@@ -46,7 +46,7 @@ class Random {
 
 	async getCat() {
 		const Cat = await fetch('http://aws.random.cat/meow');
-		const cat = await Joke.json();
+		const cat = await Cat.json();
 
 		if (!cat.url) {
 			throw new Error(
