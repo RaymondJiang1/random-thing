@@ -6,8 +6,9 @@ Below are the things that this package offers you.
 - Get a cute dog
 - Get a cute cat
 - Get a funny meme!
+- Get a random string
 
-# SETUP
+# SETUP FOR RANDOM THING
 
 ```js
 const discord = require('discord.js');
@@ -22,6 +23,28 @@ client.on('ready', () => {
 client.on('message', async (message) => {
 	if (message.content === '!joke') {
 		let data = await random.getJoke();
+		message.channel.send(data);
+	}
+});
+
+client.login('TOKEN');
+```
+
+# SETUP FOR ANIME THING
+
+```js
+const discord = require('discord.js');
+const client = new discord.Client();
+const { Anime } = require('random-thing');
+const random = new Anime();
+
+client.on('ready', () => {
+	console.log('Ready to go');
+});
+
+client.on('message', async (message) => {
+	if (message.content === '!joke') {
+		let data = await random.getPat();
 		message.channel.send(data);
 	}
 });
@@ -58,5 +81,68 @@ message.channel.send(data);
 
 ```js
 let data = await Random.getMeme();
+message.channel.send(data);
+```
+
+**getRandomString()**: Provides you a very random string!
+
+```js
+let data = await Random.getRandomString();
+message.channel.send(data);
+```
+
+**getNeko()**: Provides you a neko image!
+
+```js
+let data = await Anime.getNeko();
+message.channel.send(data);
+```
+
+**getNeko()**: Provides you a neko image!
+
+```js
+let data = await Anime.getNeko();
+message.channel.send(data);
+```
+
+**getNekolewd()**: Provides you a nekolwed image!
+
+```js
+let data = await Anime.getNekolewd();
+message.channel.send(data);
+```
+
+**getKitsune()**: Provides you a kitsune image!
+
+```js
+let data = await Anime.getKitsune();
+message.channel.send(data);
+```
+
+**getPat()**: Provides you a Pat image/gif!
+
+```js
+let data = await Anime.getPat();
+message.channel.send(data);
+```
+
+**getHug()**: Provides you a Hug image/gif!
+
+```js
+let data = await Anime.getHug();
+message.channel.send(data);
+```
+
+**getWaifu()**: Provides you a Waifu image/gif!
+
+```js
+let data = await Anime.getWaifu();
+message.channel.send(data);
+```
+
+**getCry()**: Provides you a cry image/gif!
+
+```js
+let data = await Anime.getCry();
 message.channel.send(data);
 ```

@@ -84,6 +84,35 @@ class Random {
 
 		return content;
 	}
+
+	async getAdvice() {
+		const main = await fetch('https://api.adviceslip.com/advice');
+		const mat = await main.json();
+
+		if (!mat) {
+			return console.log('Error 01: Unable to access the json content of API');
+		}
+
+		let content = { embed: { description: mat.slip.advice, color: 'RANDOM' } };
+
+		return content;
+	}
+
+	async getString() {
+		const main = await fetch('https://apis.duncte123.me/random-string');
+		const mat = await main.json();
+
+		if (!mat.data) {
+			throw new Error(
+				'String could not be gotten. Please wait for the developers to fix this!',
+			);
+		}
+		let content = {
+			embed: { color: 'RANDOM', title: 'Random String', description: mat.data },
+		};
+
+		return content;
+	}
 }
 
 module.exports = Random;
