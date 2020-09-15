@@ -1,6 +1,6 @@
 {
 	"name": "random-thing-for-discord",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "Can get random things from the internet",
 	"main": "index.js",
 	"scripts": {
@@ -16,7 +16,7 @@
 		"thing",
 		"discord"
 	],
-	"author": "RaymondJiang1#5270 neko#0003",
+	"author": "RaymondJiang1#5270",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/RaymondJiang1/random-thing/issues"

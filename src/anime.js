@@ -140,6 +140,86 @@ class Anime {
 		};
 		return content;
 	}
+
+	async getKiss() {
+		const main = await fetch('https://neko-love.xyz/api/v1/kiss');
+		const mat = await main.json();
+
+		if (!mat.url) {
+			throw new Error(
+				'Image could not be gotten. Please wait for the developers to fix this!',
+			);
+		}
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random kiss image',
+				description: 'Super cute right?',
+				image: { url: mat.url },
+			},
+		};
+		return content;
+	}
+
+	async getSlap() {
+		const main = await fetch('https://neko-love.xyz/api/v1/slap');
+		const mat = await main.json();
+
+		if (!mat.url) {
+			throw new Error(
+				'Image could not be gotten. Please wait for the developers to fix this!',
+			);
+		}
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random slap image',
+				description: 'Super cute right?',
+				image: { url: mat.url },
+			},
+		};
+		return content;
+	}
+
+	async getSmug() {
+		const main = await fetch('https://neko-love.xyz/api/v1/smug');
+		const mat = await main.json();
+
+		if (!mat.url) {
+			throw new Error(
+				'Image could not be gotten. Please wait for the developers to fix this!',
+			);
+		}
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random smug image',
+				description: 'Super cute right?',
+				image: { url: mat.url },
+			},
+		};
+		return content;
+	}
+
+	async getPunch() {
+		const main = await fetch('https://neko-love.xyz/api/v1/punch');
+		const mat = await main.json();
+
+		if (!mat.url) {
+			throw new Error(
+				'Image could not be gotten. Please wait for the developers to fix this!',
+			);
+		}
+		let content = {
+			embed: {
+				color: 'RANDOM',
+				title: 'Random punch image',
+				description: 'Super cute right?',
+				image: { url: mat.url },
+			},
+		};
+		return content;
+	}
 }
 
 module.exports = Anime;

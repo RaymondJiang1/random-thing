@@ -140,9 +140,37 @@ let data = await Anime.getWaifu();
 message.channel.send(data);
 ```
 
+**getKiss()**: Provides you a cry image/gif!
+
+```js
+let data = await Anime.getKiss();
+message.channel.send(data);
+```
+
+**getSlap()**: Provides you a cry image/gif!
+
+```js
+let data = await Anime.getSlap();
+message.channel.send(data);
+```
+
 **getCry()**: Provides you a cry image/gif!
 
 ```js
 let data = await Anime.getCry();
+message.channel.send(data);
+```
+
+**getSmug()**: Provides you a cry image/gif!
+
+```js
+let data = await Anime.getSmug();
+message.channel.send(data);
+```
+
+**getPunch()**: Provides you a punch image/gif!
+
+```js
+let data = await Anime.getPunch();
 message.channel.send(data);
 ```
